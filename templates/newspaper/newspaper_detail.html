@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ newspaper.title }} <a style="float: right" href="{% url 'newspaper:newspaper-update' pk=newspaper.id %}">Edit</a></h1>
+  <p>Content: {{ newspaper.content }}</p>
+  <p>Published_date: {{ newspaper.published_date }}</p>
+  <p>Topic: {{ newspaper.topic }} </p>
+  <br>
+  <div class="ml-3">
+    <h3>Redactors</h3>
+    {% for publisher in newspaper.publishers.all %}
+      <br>
+      <p class="text-muted"> First name: {{ publisher.first_name }}, Last name: {{ publisher.last_name }} ({{ publisher.username }})</p>
+    {% endfor %}
+  </div>
+{% endblock %}
