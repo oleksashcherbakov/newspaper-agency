@@ -112,8 +112,6 @@ class NewspaperDetailView(LoginRequiredMixin, generic.DetailView):
 
 class NewspaperUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Newspaper
-    # fields = "__all__"
-    # template_name = "newspaper/newspaper_form.html"
     success_url = reverse_lazy("newspaper:newspaper-list")
     form_class = NewspaperForm
 
