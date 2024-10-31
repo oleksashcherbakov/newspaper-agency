@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ topic.name }} <a style="float: right" href="{% url 'newspaper:topic-update' pk=topic.id %}">Edit</a></h1>
+  <br>
+  <div class="ml-3">
+    <h3>Newspapers</h3>
+    {% for newspaper in topic.newspaper.all %}
+      <br>
+      <p class="text-muted"> Newspaper: {{ newspaper.id }}, title: {{ newspaper.title }}, topic: {{ newspaper.topic }}</p>
+    {% endfor %}
+    <br>
+  </div>
+{% endblock %}
