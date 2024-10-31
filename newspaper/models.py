@@ -36,10 +36,10 @@ class Newspaper(models.Model):
     topic = models.ForeignKey(
         Topic,
         on_delete=models.CASCADE,
-        related_name="newspaper"
+        related_name="newspapers"
     )
     publishers = models.ManyToManyField(
-        settings.AUTH_USER_MODEL, related_name="newspaper", blank=True
+        settings.AUTH_USER_MODEL, related_name="newspapers", blank=True
     )
 
     class Meta:
