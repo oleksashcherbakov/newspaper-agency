@@ -2,6 +2,7 @@ from django.contrib.auth.models import AbstractUser
 from django.core.validators import MaxValueValidator
 from django.db import models
 
+import newspaper_agency.settings.base
 from newspaper_agency import settings
 
 
@@ -39,7 +40,7 @@ class Newspaper(models.Model):
         related_name="newspapers"
     )
     publishers = models.ManyToManyField(
-        settings.AUTH_USER_MODEL, related_name="newspapers", blank=True
+        newspaper_agency.settings.base.AUTH_USER_MODEL, related_name="newspapers", blank=True
     )
 
     class Meta:

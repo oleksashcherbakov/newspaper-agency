@@ -20,6 +20,7 @@ from django.urls import path, include
 import debug_toolbar
 from django.conf.urls.static import static
 
+import newspaper_agency.settings.base
 from newspaper_agency import settings
 
 urlpatterns = [
@@ -27,4 +28,4 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     path("", include("newspaper.urls", namespace="newspaper")),
     path("__debug__/", include(debug_toolbar.urls)),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(newspaper_agency.settings.base.STATIC_URL, document_root=newspaper_agency.settings.base.STATIC_ROOT)
