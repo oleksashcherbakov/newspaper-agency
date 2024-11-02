@@ -1,0 +1,280 @@
+[
+{
+    "model": "newspaper.redactor",
+    "pk": 2,
+    "fields": {
+        "password": "!dUHfWMuJwkcTWJd62fFKeGrL27kRlaz21IjDgUTS",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "redactor_1",
+        "first_name": "Peter",
+        "last_name": "Laurence",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-09-16T07:42:34Z",
+        "years_of_experience": 15,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "newspaper.redactor",
+    "pk": 3,
+    "fields": {
+        "password": "!YAGIN05sY4pHrYCXBueNX7okSAeeVBWxOYalcA6D",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "redactor_2",
+        "first_name": "Anthony",
+        "last_name": "Zurcher",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-09-16T07:43:16.449Z",
+        "years_of_experience": 5,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "newspaper.redactor",
+    "pk": 4,
+    "fields": {
+        "password": "!9rNZ1XzCUqw35fWQX8y3RLxW71Ikf12qn6OopeIT",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "redactor_3",
+        "first_name": "Malu",
+        "last_name": "Cursino",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-09-16T07:44:07.263Z",
+        "years_of_experience": 25,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "newspaper.redactor",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$n5INOExGbrzO1z8JgCaOEK$vtFMUmqIBkUllbQcimLTnEXtD9I3UMnfTFu3F6KaVi0=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "new_admin",
+        "first_name": "name",
+        "last_name": "name",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-09-16T09:28:25.833Z",
+        "years_of_experience": 100,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "newspaper.redactor",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$870000$70CjRPKVYydt8Q90o2hON2$uW3pAP+LytJaFEHO8SbNCCnj+QZxT6ODkaXxUb1DmDM=",
+        "last_login": "2024-10-31T15:37:52.784Z",
+        "is_superuser": true,
+        "username": "admin_1",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin_1@admin.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-10-25T11:41:54.152Z",
+        "years_of_experience": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "newspaper.redactor",
+    "pk": 8,
+    "fields": {
+        "password": "Terranprotoss1!",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "admin_tesr",
+        "first_name": "test_name",
+        "last_name": "teat_last name",
+        "email": "test@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-10-25T12:14:21Z",
+        "years_of_experience": 5,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "newspaper.redactor",
+    "pk": 9,
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "3112786777",
+        "first_name": "asdsad",
+        "last_name": "asdasd",
+        "email": "sleekline@meta.ua",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-10-25T13:15:03.929Z",
+        "years_of_experience": 25,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "newspaper.topic",
+    "pk": 1,
+    "fields": {
+        "name": "Sport"
+    }
+},
+{
+    "model": "newspaper.topic",
+    "pk": 2,
+    "fields": {
+        "name": "Bussiness"
+    }
+},
+{
+    "model": "newspaper.topic",
+    "pk": 3,
+    "fields": {
+        "name": "Innovation"
+    }
+},
+{
+    "model": "newspaper.topic",
+    "pk": 4,
+    "fields": {
+        "name": "Culture"
+    }
+},
+{
+    "model": "newspaper.topic",
+    "pk": 5,
+    "fields": {
+        "name": "Arts"
+    }
+},
+{
+    "model": "newspaper.topic",
+    "pk": 6,
+    "fields": {
+        "name": "Travel"
+    }
+},
+{
+    "model": "newspaper.topic",
+    "pk": 7,
+    "fields": {
+        "name": "Earth"
+    }
+},
+{
+    "model": "newspaper.topic",
+    "pk": 8,
+    "fields": {
+        "name": "Weather"
+    }
+},
+{
+    "model": "newspaper.topic",
+    "pk": 9,
+    "fields": {
+        "name": "Newsletters"
+    }
+},
+{
+    "model": "newspaper.topic",
+    "pk": 10,
+    "fields": {
+        "name": "What about us?"
+    }
+},
+{
+    "model": "newspaper.topic",
+    "pk": 12,
+    "fields": {
+        "name": "test 1"
+    }
+},
+{
+    "model": "newspaper.topic",
+    "pk": 13,
+    "fields": {
+        "name": "test 2_11"
+    }
+},
+{
+    "model": "newspaper.newspaper",
+    "pk": 1,
+    "fields": {
+        "title": "Cowboys, Ravens & 49ers lose on NFL Sunday of shocks",
+        "content": "It was a Sunday of shock results in week two, showing this NFL season could be wide open as more teams join the list of contenders.\r\n\r\nThe New Orleans Saints look the real deal after they blew away the Dallas Cowboys in their own backyard, while the Houston Texans confirmed their status by seeing off Caleb Williams' Chicago Bears.\r\n\r\nNobody saw the Las Vegas Raiders beating the Ravens in Baltimore in a stunning upset, while the San Francisco 49ers also came unstuck at the Minnesota Vikings.\r\n\r\nDefending Super Bowl champions the Kansas City Chiefs edged their big rivals Cincinnati Bengals in another thriller and the Green Bay Packers found a way to win without Jordan Love.",
+        "published_date": "2024-09-16",
+        "topic": 1,
+        "publishers": []
+    }
+},
+{
+    "model": "newspaper.newspaper",
+    "pk": 2,
+    "fields": {
+        "title": "Who has made Troy's Premier League team of the week?",
+        "content": "After every round of Premier League matches this season, BBC football pundit Troy Deeney will give you his team and manager of the Week.\r\nHere are this week's choices. Do you agree? Give us your thoughts using the comments form at the bottom of this page.\r\nRobert Sanchez (Chelsea): He made a great save from Evanilson's penalty, although I think he got stitched up with the backpass that led to it. All in all, a good night's work for him. He's come under a lot of pressure - it was between him and Andre Onana but I decided to go with Sanchez because he's had stick.\r\nAxel Tuanzebe (Ipswich): He absolutely dealt with Kaoru Mitoma. He is obviously really good - excellent defending and he did well going forward. He contributed to another clean sheet for Ipswich on the road.\r\nMatthijs de Ligt (Manchester United): He struggled at the start, got found out in one-on-one situations with Kyle Walker-Peters and got sent to the shops. But his goal sent United on their way, plus another clean sheet. After he scored, he got more confident and we saw the class and quality he has.\r\nGabriel (Arsenal): What a monster. Great header for the goal. It was just a monstrous display from Arsenal defensively. The two centre-halves stepped up but Gabriel gets it because of that wonderful goal.\r\nJan Paul van Hecke (Brighton): He's wonderful on the ball, looks so calm and composed. I think he'll be the one they end up selling next year to someone like Liverpool. He's naturally left-footed and never looks flustered. A clean sheet for a Brighton team who keep on rolling.",
+        "published_date": "2024-09-16",
+        "topic": 1,
+        "publishers": []
+    }
+},
+{
+    "model": "newspaper.newspaper",
+    "pk": 3,
+    "fields": {
+        "title": "TikTok to begin appeal against being sold or banned in US",
+        "content": "TikTok will start making its case on Monday against a law that will see it banned in the US unless Chinese owner ByteDance sells the social media app within nine months.\r\nThe measure - signed into law by President Biden in April - has been prompted by concerns that US users' data is vulnerable to exploitation by China's government.\r\nTikTok and ByteDance have always denied links to the Chinese authorities and have described the law an \"extraordinary intrusion on free speech rights.\"\r\nThe firm, which claims to have more than 170 million US users, will make its arguments before a three-judge panel at an appeals court in Washington DC.",
+        "published_date": "2024-09-16",
+        "topic": 2,
+        "publishers": [
+            2
+        ]
+    }
+},
+{
+    "model": "newspaper.newspaper",
+    "pk": 4,
+    "fields": {
+        "title": "Push it",
+        "content": "test",
+        "published_date": "2024-09-16",
+        "topic": 10,
+        "publishers": [
+            3
+        ]
+    }
+},
+{
+    "model": "newspaper.newspaper",
+    "pk": 5,
+    "fields": {
+        "title": "asdasd",
+        "content": "asdasd",
+        "published_date": "2024-09-16",
+        "topic": 1,
+        "publishers": [
+            4
+        ]
+    }
+}
+]
