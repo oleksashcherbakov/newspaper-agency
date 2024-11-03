@@ -37,7 +37,12 @@ The Django admin interface is available at /admin/. You can use it to manage the
 ### Debug Toolbar
 The Django Debug Toolbar is included in the project. It's automatically added to the URL patterns when in debug mode.
 
-
+### Website details:
+- deployed on render.com
+- domain: https://newspaper-agency-1xf5.onrender.com/
+- all rights reserved by render's rules
+- for guest access feel free to contact me by email (default user created)
+- _special thanks to the Mate academy mentors for their endless and absolute faith in our wonderful future as python developers_ 
 
 
 ### Website screens
