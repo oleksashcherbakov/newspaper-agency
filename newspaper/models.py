@@ -12,6 +12,7 @@ class Redactor(AbstractUser):
     years_of_experience = models.IntegerField(
         blank=True, null=True, default=0, validators=[MaxValueValidator(100)]
     )
+    is_redactor = models.BooleanField(default=False)
 
     class Meta:
         ordering = ("first_name",)
