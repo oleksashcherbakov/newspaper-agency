@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.urls import reverse_lazy
@@ -10,12 +10,12 @@ from newspaper.forms import (
     NewspaperForm,
     RedactorUsernameSearchForm,
     NewspaperTitleSearchForm,
-    TopicNameSearchForm
+    TopicNameSearchForm,
 )
 from newspaper.models import Redactor, Newspaper, Topic
 
 
-@login_required
+# @login_required
 def index(request: HttpRequest) -> HttpResponse:
     num_redactors = Redactor.objects.count()
     num_topics = Topic.objects.count()
@@ -32,7 +32,7 @@ def index(request: HttpRequest) -> HttpResponse:
     return render(request, "newspaper/index.html", context=context)
 
 
-class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
+class RedactorCreateView(generic.CreateView):
     model = Redactor
     success_url = reverse_lazy("newspaper:redactor-list")
     form_class = RedactorCreationForm
@@ -64,24 +64,25 @@ class RedactorDetailView(LoginRequiredMixin, generic.DetailView):
     model = Redactor
 
 
-class RedactorUpdateView(LoginRequiredMixin, generic.UpdateView):
+class RedactorUpdateView(LoginRequiredMixin, PermissionRequiredMixin, generic.UpdateView):
     model = Redactor
     success_url = reverse_lazy("newspaper:redactor-list")
     form_class = RedactorCreationForm
+    permission_required = "newspaper.change_redactor"
 
 
-class RedactorDeleteView(LoginRequiredMixin, generic.DeleteView):
+class RedactorDeleteView(LoginRequiredMixin, PermissionRequiredMixin, generic.DeleteView):
     model = Redactor
     template_name = "newspaper/redactor_confirm_delete.html"
     success_url = reverse_lazy("newspaper:redactor-list")
+    permission_required = "newspaper.delete_redactor"
 
 
-class NewspaperCreateView(LoginRequiredMixin, generic.CreateView):
+class NewspaperCreateView(LoginRequiredMixin, PermissionRequiredMixin, generic.CreateView):
     model = Newspaper
-    # fields = "__all__"
-    # template_name = "newspaper/newspaper_form.html"
     success_url = reverse_lazy("newspaper:newspaper-list")
     form_class = NewspaperForm
+    permission_required = "newspaper.add_newspaper"
 
 
 class NewspaperListView(LoginRequiredMixin, generic.ListView):
@@ -110,23 +111,26 @@ class NewspaperDetailView(LoginRequiredMixin, generic.DetailView):
     model = Newspaper
 
 
-class NewspaperUpdateView(LoginRequiredMixin, generic.UpdateView):
+class NewspaperUpdateView(LoginRequiredMixin, PermissionRequiredMixin, generic.UpdateView):
     model = Newspaper
     success_url = reverse_lazy("newspaper:newspaper-list")
     form_class = NewspaperForm
+    permission_required = "newspaper.change_newspaper"
 
 
-class NewspaperDeleteView(LoginRequiredMixin, generic.DeleteView):
+class NewspaperDeleteView(LoginRequiredMixin, PermissionRequiredMixin, generic.DeleteView):
     model = Newspaper
     template_name = "newspaper/newspaper_confirm_delete.html"
     success_url = reverse_lazy("newspaper:newspaper-list")
+    permission_required = "newspaper.delete_newspaper"
 
 
-class TopicCreateView(LoginRequiredMixin, generic.CreateView):
+class TopicCreateView(LoginRequiredMixin, PermissionRequiredMixin,generic.CreateView):
     model = Topic
     fields = "__all__"
     template_name = "newspaper/topic_form.html"
     success_url = reverse_lazy("newspaper:topic-list")
+    permission_required = "newspaper.add_topic"
 
 
 class TopicListView(LoginRequiredMixin, generic.ListView):
@@ -155,14 +159,16 @@ class TopicDetailView(LoginRequiredMixin, generic.DetailView):
     model = Topic
 
 
-class TopicUpdateView(LoginRequiredMixin, generic.UpdateView):
+class TopicUpdateView(LoginRequiredMixin, PermissionRequiredMixin, generic.UpdateView):
     model = Topic
     fields = "__all__"
     template_name = "newspaper/topic_form.html"
     success_url = reverse_lazy("newspaper:topic-list")
+    permission_required = "newspaper.change_topic"
 
 
 class TopicDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Topic
     template_name = "newspaper/topic_confirm_delete.html"
     success_url = reverse_lazy("newspaper:topic-list")
+    permission_required = "newspaper.change_topic"

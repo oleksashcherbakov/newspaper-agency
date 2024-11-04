@@ -1,9 +1,11 @@
-from django.contrib.auth.models import AbstractUser
+from datetime import timezone, datetime
+
+from django.contrib.auth.base_user import AbstractBaseUser
+from django.contrib.auth.models import AbstractUser, PermissionsMixin, UserManager
 from django.core.validators import MaxValueValidator
 from django.db import models
 
 import newspaper_agency.settings.base
-from newspaper_agency import settings
 
 
 class Redactor(AbstractUser):
