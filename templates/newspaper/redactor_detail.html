@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>{{ redactor.username }} <a style="float: right" href="{% url 'newspaper:redactor-update' pk=redactor.id %}">Edit</a></h1>
+  <p>First name: {{ redactor.first_name }}</p>
+  <p>Last name: {{ redactor.last_name }}</p>
+  <p>Experience: {{ redactor.years_of_experience }} year / years function</p>
+  <br>
+  <div class="ml-3">
+    <h3>Redactor's posts</h3>
+    {% for newspaper in redactor.newspaper.all %}
+      <br>
+      <p class="text-muted"> Newspaper: {{ newspaper.id }}, title: {{ newspaper.title }}, topic: {{ newspaper.topic }}</p>
+    {% endfor %}
+  </div>
+{% endblock %}
