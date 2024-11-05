@@ -40,8 +40,10 @@ The Django Debug Toolbar is included in the project. It's automatically added to
 ### Website details:
 - deployed on render.com
 - domain: https://newspaper-agency-1xf5.onrender.com/
+- to get access you can use:
+  - _login:_ user and _password:_ user12345 (status: superuser)
+  - or create our own user with limited rights
 - all rights reserved by render's rules
-- for guest access feel free to contact me by email (default user created)
 - _special thanks to the Mate academy mentors for their endless and absolute faith in our wonderful future as python developers_ 
 
 
